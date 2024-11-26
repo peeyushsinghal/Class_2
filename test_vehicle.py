@@ -8,15 +8,15 @@ class TestVehicle(unittest.TestCase):
     
     def test_vehicle_count_increment(self):
         """Test if vehicle count increases when creating new vehicles"""
-        v1 = Vehicle("Model1")
+        v1 = Vehicle("Model1", "Toyota", 2020)
         self.assertEqual(Vehicle.get_vehicle_count(), 1)
-        v2 = Vehicle("Model2")
+        v2 = Vehicle("Model2", "Toyota", 2021)
         self.assertEqual(Vehicle.get_vehicle_count(), 2)
     
     def test_vehicle_count_decrement(self):
         """Test if vehicle count decreases when deleting vehicles"""
-        v1 = Vehicle("Model1")
-        v2 = Vehicle("Model2")
+        v1 = Vehicle("Model1", "Toyota", 2020)
+        v2 = Vehicle("Model2", "Toyota", 2021)
         del v1
         self.assertEqual(Vehicle.get_vehicle_count(), 1)
     
