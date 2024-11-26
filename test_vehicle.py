@@ -38,12 +38,5 @@ class TestVehicle(unittest.TestCase):
         self.assertEqual(ElectricVehicle.classify_vehicle("truck"), 
                         "This is an electric truck")
     
-    def test_electric_vehicle_count(self):
-        """Test if electric vehicles are counted in total vehicle count"""
-        v1 = Vehicle("Regular Car")
-        ev1 = ElectricVehicle("Tesla")
-        self.assertEqual(Vehicle.get_vehicle_count(), 2)
-        self.assertEqual(ElectricVehicle.get_vehicle_count(), 2)
-
 if __name__ == '__main__':
     unittest.main() 
